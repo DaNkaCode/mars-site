@@ -1,0 +1,82 @@
+// Breakpoints
+$viewport-max: 1920;
+$viewport-min: 280;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Grid
+$container-width: 1375px;
+$grid-gap: 30px;
+$container-padding: 15px;
+
+// Base colors
+$white: #FFFFFF;
+$black: #000000;
+
+$blue: #3E4761;
+$dark-blue: #222735;
+$medium-blue: #2B344B;
+
+$yellow: #FFB762;
+$orange: #FD9B40;
+$milk: #FFDEB7;
+
+// Semantic colors
+$title-color: $white;
+$title-second-color: $black;
+
+$text-color: $white;
+$text-second-color: $milk;
+
+$accent-color: $orange;
+
+$button-color: $blue;
+
+$link-color: $white;
+
+$footer-bg: $yellow;
+
+$border-light: $white;
+$background-dark: $medium-blue;
+$background-darker: $dark-blue;
+
+// Components color
+$sidenav-background: $blue;
+
+// Gradients
+$section-gradient: linear-gradient(0.00deg, $dark-blue, $medium-blue 100%);
+$section-second-gradient: linear-gradient(-0.56deg, $medium-blue -2.145%,$dark-blue 97.997%);
+
+
+// Typography
+$title-font: 'Gputeks', sans-serif;
+$text-font: 'Gputeks', sans-serif;
+
+$text-hover: 0px 0px 7px $white;
+
+// Font Sizes 
+$font-size-base: 30px;
+$line-height-base: 1.5;
+
+// Section Typography
+$section-title-font-size: 2rem;
+$section-text-font-size: 1rem;
+$section-small-font-size: 0.5rem;
+
+// Footer Typography
+$footer-font-size: 1rem;
+
+// Spacing
+$spacing-unit: 8px;
+$spacing-xs: $spacing-unit;
+$spacing-sm: $spacing-unit * 2;
+$spacing-md: $spacing-unit * 3;
+$spacing-lg: $spacing-unit * 4;
+$spacing-xl: $spacing-unit * 5;
+
+// Z-index
+$z-index-header: 1000;
+$z-index-modal: 2000;
+$z-index-tooltip: 3000;
