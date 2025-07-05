@@ -1,0 +1,25 @@
+@import '../font/Gputeks/stylesheet.css';
+
+h1 {
+    $pc-font-size: $main-title-font-size;
+    $mobile-font-size: $main-title-font-size-mobile;
+
+    @include adaptive-style(font-size, $pc-font-size, $mobile-font-size);
+    @include adaptive-style(line-height, $pc-font-size, $mobile-font-size);
+}
+
+h2 {
+    $pc-font-size: $section-title-font-size;
+    $mobile-font-size: $section-title-font-size-mobile;
+
+    @include adaptive-style(font-size, $pc-font-size, $mobile-font-size);
+    @include adaptive-style(line-height, $pc-font-size, $mobile-font-size);
+}
+
+p, a, label, input, input::placeholder, button {
+    $pc-font-size: $section-text-font-size;
+    $mobile-font-size: $section-text-font-size-mobile;
+
+    @include adaptive-style(font-size, $pc-font-size, $mobile-font-size);
+    @include adaptive-style(line-height, $pc-font-size * 1.5, $mobile-font-size);
+}

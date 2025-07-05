@@ -1,0 +1,26 @@
+.start {
+    @extend %section-size;
+    @include section-position;
+
+    &__content {
+        @extend %flex-column-center;
+        
+        justify-content: space-between;
+        align-items: flex-start;
+
+        padding: $grid-gap;
+    }
+
+    &__background {
+        background-color: $background-darker;
+    }
+
+    &__btn {
+        @extend %hover-and-active;
+
+        background-color: $button-color;
+        padding: $grid-gap;
+        text-align: center;
+        user-select: none;
+    }
+}

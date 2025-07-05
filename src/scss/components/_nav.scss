@@ -9,6 +9,7 @@
 
     &__link {
         @include adaptive-style(font-size, 1rem, 0.67rem);
+        
         white-space: nowrap;
 
         &:hover {

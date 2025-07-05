@@ -1,6 +1,7 @@
 // Abstracts 
 @import "abstracts/variables";
 @import "abstracts/functions";
+@import "abstracts/extends";
 @import "abstracts/mixins";
 
 // Base
@@ -9,10 +10,12 @@
 
 // Components
 @import "components/nav";
+@import "components/container";
 
 // Layouts
 @import "layouts/header";
 
 // Pages 
+@import "pages/start";
 
 // Vendors
