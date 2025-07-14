@@ -4,16 +4,13 @@
 
     &__content {
         @extend %flex-column-center;
-        
+
         justify-content: space-between;
         align-items: flex-start;
 
         padding: $grid-gap;
     }
 
-    &__background {
-        background-color: $background-darker;
-    }
 
     &__btn {
         @extend %hover-and-active;
@@ -22,5 +19,33 @@
         padding: $grid-gap;
         text-align: center;
         user-select: none;
+    }
+
+    &__background {
+        background-color: $background-darker;
+    }
+
+    &__flight {
+        width: 1582 / 1920 * 100%;
+
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        transform: translateX(530 / 1582 * 100%) translateY(828 / 1515 * 100%);
+    }
+
+    &__planet {
+        @extend %full-size;
+    }
+
+    &__rocket {
+        width: 248 / 1582 * 100%;
+
+        position: absolute;
+        right: 70%;
+        bottom: 75%;
+
+        rotate: -40deg;
     }
 }
