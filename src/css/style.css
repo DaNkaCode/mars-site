@@ -1,10 +1,10 @@
 @import '../font/Gputeks/stylesheet.css';
-.start__planet, .start__content, .start__background, .container {
+.about__content, .about__background, .start__planet, .start__content, .start__background, .alien__body, .container {
   width: 100%;
   height: 100%;
 }
 
-.start {
+.about, .start {
   height: 100dvh;
   width: 100%;
   overflow: hidden;
@@ -236,7 +236,7 @@ p, a, label, input, input::placeholder, button {
 }
 
 .container {
-  padding: 80px 11% 80px 70px;
+  padding: 80px 11dvw 80px 70px;
 }
 @media screen and (min-width: 1921px) {
   .container {
@@ -245,13 +245,27 @@ p, a, label, input, input::placeholder, button {
 }
 @media screen and (max-width: 1300px) {
   .container {
-    padding: 80px 15% 80px 70px;
+    padding: 80px 15dvw 80px 70px;
   }
 }
 @media screen and (max-width: 870px) {
   .container {
-    padding: 20px 35% 40px 20px;
+    padding: 20px 35dvw 40px 20px;
   }
+}
+
+.alien {
+  width: 23.9938080495%;
+  aspect-ratio: 155/197;
+  position: relative;
+}
+.alien__eye {
+  width: 9.6774193548%;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 35.0253807107%;
+  left: 43.8709677419%;
+  z-index: 2;
 }
 
 .header {
@@ -373,4 +387,87 @@ p, a, label, input, input::placeholder, button {
   right: 70%;
   bottom: 75%;
   rotate: -40deg;
+}
+
+.about {
+  position: relative;
+  background-image: linear-gradient(-0.56deg, #2B344B -2.145%, #222735 97.997%);
+}
+.about__content {
+  position: relative;
+  z-index: 2;
+}
+.about__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.about__content {
+  max-width: 50%;
+  position: relative;
+  left: 50%;
+  z-index: 3;
+}
+.about__picture {
+  max-width: 50%;
+  aspect-ratio: 646/871;
+  position: relative;
+}
+.about__planets {
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+.about__picture > .alien {
+  position: absolute;
+  top: 31.5729047072%;
+  left: 25.5417956656%;
+}
+.about__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 30px;
+}
+@media screen and (max-width: 992px) {
+  .about__content {
+    max-width: none;
+    left: auto;
+  }
+  .about__content > .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .about__info {
+    padding: 10px;
+    position: relative;
+  }
+  .about__info::before {
+    content: "";
+    background-color: #3E4761;
+    opacity: 0.5;
+    border-radius: 15px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .about__picture {
+    max-width: none;
+    aspect-ratio: 646/871;
+    position: relative;
+  }
 }

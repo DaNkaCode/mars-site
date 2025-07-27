@@ -1,0 +1,64 @@
+.about {
+    @include section-position;
+    @extend %section-size;
+
+    background-image: $section-second-gradient;
+
+    &__content {
+        max-width: 50%;
+
+        position: relative;
+        left: 50%;
+        z-index: 3;
+    }
+
+    &__picture {
+        max-width: 50%;
+        aspect-ratio: 646 / 871;
+
+        position: relative;
+    }
+
+    &__planets {
+        height: 100%;
+
+        position: relative;
+        z-index: 2;
+    }
+
+    &__picture>.alien {
+        position: absolute;
+        top: 275 / 871 * 100%;
+        left: 165 / 646 * 100%;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        row-gap: $grid-gap;
+    }
+
+    @media screen and (max-width: $breakpoint-lg) {
+        &__content {
+            max-width: none;
+            left: auto;
+        }
+
+        &__content > .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__info {
+            @include background-frame($color: $blue);
+        }
+
+        &__picture {
+            max-width: none;
+            aspect-ratio: 646 / 871;
+
+            position: relative;
+        }
+    }
+}
