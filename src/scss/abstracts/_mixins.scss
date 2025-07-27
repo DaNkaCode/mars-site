@@ -72,3 +72,30 @@
         @extend %full-size;
     }
 }
+
+
+@mixin background-frame($color) {
+    // Добавление отступа вокруг элемента
+    padding: 10px;
+
+    // Изменение позиционирования, если указано значение отличное от static
+    @if (position != static) {
+        position: relative;
+    }
+
+    &::before {
+        content: '';
+
+        background-color: $color;
+        opacity: 0.5;
+        border-radius: 15px;
+
+        position: absolute;
+        z-index: -1;
+
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
