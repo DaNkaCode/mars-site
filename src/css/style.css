@@ -1,10 +1,10 @@
 @import '../font/Gputeks/stylesheet.css';
-.about__content, .about__background, .start__planet, .start__content, .start__background, .alien__body, .container {
+.conquest__content, .conquest__background, .about__content, .about__background, .start__planet, .start__content, .start__background, .alien__body, .container {
   width: 100%;
   height: 100%;
 }
 
-.about, .start {
+.conquest, .about, .start {
   height: 100dvh;
   width: 100%;
   overflow: hidden;
@@ -470,4 +470,107 @@ p, a, label, input, input::placeholder, button {
     aspect-ratio: 646/871;
     position: relative;
   }
+}
+
+.conquest {
+  position: relative;
+}
+.conquest__content {
+  position: relative;
+  z-index: 2;
+}
+.conquest__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.conquest__content > .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media screen and (max-width: 992px) {
+  .conquest__content > .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 30px;
+  }
+}
+.conquest__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 30px;
+}
+.conquest__rovers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-column-gap: 60px;
+     -moz-column-gap: 60px;
+          column-gap: 60px;
+}
+@media screen and (max-width: 768px) {
+  .conquest__rovers {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+.conquest__rover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 30px;
+}
+.conquest__rover span {
+  font-size: calc(0.4rem + 3 * (100dvw - 280px) / (1920 - 280));
+}
+.conquest__background {
+  background: url("../img/section-3-bg.svg") bottom center/100% no-repeat, -webkit-gradient(linear, left bottom, left top, from(#222735), to(#2B344B));
+  background: url("../img/section-3-bg.svg") bottom center/100% no-repeat, linear-gradient(0deg, #222735, #2B344B 100%);
+}
+.conquest__rover-img, .conquest__alien-img {
+  position: absolute;
+}
+.conquest__rover-img {
+  bottom: 5vh;
+  left: 40vw;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  width: 475px;
+  height: 419px;
+}
+.conquest__alien-img {
+  bottom: 5vh;
+  left: 10vw;
+  width: 397px;
+  height: 503px;
 }

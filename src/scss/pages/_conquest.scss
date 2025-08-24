@@ -1,0 +1,83 @@
+.conquest {
+    @include section-position;
+    @extend %section-size;
+
+    &__content>.container {
+        display: flex;
+        column-gap: $grid-gap;
+        align-items: flex-start;
+
+        @media screen and (max-width: $breakpoint-lg) {
+            flex-direction: column;
+            row-gap: $grid-gap;
+        }
+    }
+    
+    &__header {
+        display: flex;
+        flex-direction: column;
+        
+        row-gap: $grid-gap;
+    }
+    
+    &__rovers {
+        display: flex;
+        flex-direction: row;
+        column-gap: $grid-gap * 2;
+        
+        @media screen and (max-width: $breakpoint-md) {
+            display: grid;
+            grid-auto-flow: row; 
+            grid-template-columns: repeat(2, 1fr);
+            gap: $grid-gap;
+        }
+    }
+
+    &__rover {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: $grid-gap;
+
+        span {
+            @include adaptive-style(font-size, $section-small-font-size, $section-small-font-size-mobile)
+        }
+    }
+
+    &__background {
+        background: url("../img/section-3-bg.svg") bottom center / 100% no-repeat,
+            $section-gradient;
+    }
+
+    &__rover-img,
+    &__alien-img {
+        position: absolute;
+    }
+
+    &__rover-img {
+        $width: 475px;
+        $height: 419px;
+        $aspect-ratio: 475 / 419;
+
+        bottom: 5vh;
+        left: 40vw;
+
+        transform: rotateY(180deg);
+
+        width: min($width, $height * $aspect-ratio);
+        height: min($height, $width / $aspect-ratio);
+    }
+
+    &__alien-img {
+        $width: 397px;
+        $height: 503px;
+        $aspect-ratio: 397 / 503;
+
+        bottom: 5vh;
+        left: 10vw;
+
+        width: min($width, $height * $aspect-ratio);
+        height: min($height, $width / $aspect-ratio);
+    }
+}
