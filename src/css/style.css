@@ -561,16 +561,20 @@ p, a, label, input, input::placeholder, button {
   position: absolute;
 }
 .conquest__rover-img {
-  bottom: 5vh;
+  width: 24.7395833333dvw;
+  aspect-ratio: 1.1336515513;
+  bottom: calc((1dvh + 1dvw) * 2);
   left: 40vw;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  width: 475px;
-  height: 419px;
 }
 .conquest__alien-img {
-  bottom: 5vh;
+  width: 20.6770833333dvw;
+  aspect-ratio: 0.7892644135;
+  bottom: calc((1dvh + 1dvw) * 2);
   left: 10vw;
-  width: 397px;
-  height: 503px;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
 }
