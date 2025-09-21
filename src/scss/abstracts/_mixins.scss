@@ -74,6 +74,24 @@
 }
 
 
+// ==========================================
+// Миксин `background-frame` для создания рамки
+// с фоном вокруг элемента. Использует
+// псевдоэлемент ::before с настраиваемыми свойствами.
+//
+// Пример использования:
+//   .framed-element {
+//     @include background-frame;
+//   }
+//
+// Описание:
+// Этот миксин предоставляет удобный способ добавления
+// фоновой рамки вокруг элемента. Он использует
+// псевдоэлемент ::before для создания фона с настраиваемыми
+// свойствами, такими как цвет, прозрачность и радиус скругления.
+// Миксин также предоставляет опциональный параметр для
+// настройки позиционирования элемента.
+// ==========================================
 @mixin background-frame($color) {
     // Добавление отступа вокруг элемента
     padding: 10px;
@@ -97,5 +115,70 @@
         bottom: 0;
         left: 0;
         right: 0;
+    }
+}
+
+
+// ==========================================
+// Миксин настроек спутника
+// 
+// Этот миксин предоставляет гибкое оформление элементов спутника, позволяя настраивать
+// различные параметры, такие как имя, высота, ширина, высота орбиты и позиционирование.
+// Использует flexbox для вертикального выравнивания и включает адаптивный дизайн.
+// 
+// @param {String} $name - Содержимое, отображаемое после спутника в качестве метки.
+// @param {Number} $satellite-height - Высота спутника.
+// @param {Number} $satellite-width - Ширина спутника.
+// @param {Number} $orbit-height - Высота орбиты (для вычислений в процентах).
+// @param {Number} $left-position - Горизонтальное положение спутника в орбите.
+// @param {Number} $bottom-position - Вертикальное положение спутника в орбите.
+// 
+// Пример использования:
+//   .satellite {
+//     @include satellite-settings("Спутник 1", 150, 75, 500, 250, 50);
+//   }
+// ==========================================
+@mixin satellite-settings($name, $satellite-height, $satellite-width, $orbit-height, $left-position, $bottom-position) {
+    // Стили для flexbox, обеспечивающие вертикальное выравнивание и промежутки
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: MIN(5px, 20 / 1080 * 100dvh, 20px);
+
+    // Установка высоты спутника на основе высоты орбиты
+    height: $satellite-height / $orbit-height * 100%;
+
+    // Позиционирование спутника
+    position: absolute;
+    left: $left-position / $orbit-height * 100%;
+    bottom: $bottom-position / $orbit-height * 100%;
+    
+    // Анимация вращения спутника
+    animation: rotation 12s linear infinite reverse both;
+
+    // Стили для изображения спутника
+    &-img {
+        @extend %full-size;
+    }
+    
+    // Метка, отображаемая после спутника
+    &::after {
+        content: $name;
+
+        // Позиционирование метки
+        position: absolute;
+        top: 100%;
+        
+        // Стили для текста метки
+        color: $text-second-color;
+        
+        // Адаптивный размер шрифта с использованием другого миксина
+        @include adaptive-style($property: font-size, $pc-font-size: $section-text-font-size, $mobile-font-size: $section-text-font-size-mobile);
+        letter-spacing: 15.6px;
+
+        // Скрытие метки на маленьких экранах
+        @media screen and ((max-width: $breakpoint-sm) or (max-height: $breakpoint-sm)) {
+            opacity: 0;
+        }
     }
 }

@@ -1,10 +1,11 @@
-@import '../font/Gputeks/stylesheet.css';
-.conquest__content, .conquest__background, .about__content, .about__background, .start__planet, .start__content, .start__background, .alien__body, .container {
+@charset "UTF-8";
+@import url("../font/Gputeks/stylesheet.css");
+.satellite__deimos-img, .satellite__phobos-img, .satellite__content, .satellite__background, .conquest__content, .conquest__background, .about__content, .about__background, .start__planet, .start__content, .start__background, .alien__body, .container {
   width: 100%;
   height: 100%;
 }
 
-.conquest, .about, .start {
+.satellite, .conquest, .about, .start {
   height: 100dvh;
   width: 100%;
   overflow: hidden;
@@ -437,6 +438,7 @@ p, a, label, input, input::placeholder, button {
   .about__content {
     max-width: none;
     left: auto;
+    border: 3px solid white;
   }
   .about__content > .container {
     display: -webkit-box;
@@ -577,4 +579,116 @@ p, a, label, input, input::placeholder, button {
   left: 10vw;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
+}
+
+.satellite {
+  position: relative;
+}
+.satellite__content {
+  position: relative;
+  z-index: 2;
+}
+.satellite__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.satellite__title {
+  font-size: calc(0.9rem + 33 * (100dvw - 280px) / (1920 - 280));
+  text-align: center;
+  color: #000000;
+}
+.satellite__orbit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: min(32.1354166667dvw, 57.1296296296dvh);
+  height: min(57.1296296296dvh, 32.1354166667dvw);
+  aspect-ratio: 1;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  position: sticky;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.satellite__mars {
+  width: 66.4505672609%;
+}
+.satellite__phobos, .satellite__deimos {
+  position: absolute;
+}
+.satellite__phobos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: min(5px, 1.8518518519dvh, 20px);
+  height: 15.7212317666%;
+  position: absolute;
+  left: -6.1588330632%;
+  bottom: 27.8768233387%;
+  animation: rotation 12s linear infinite reverse both;
+  width: 15.397082658%;
+}
+.satellite__phobos::after {
+  content: "Фобос";
+  position: absolute;
+  top: 100%;
+  color: #FFDEB7;
+  font-size: calc(0.78rem + 6.6 * (100dvw - 280px) / (1920 - 280));
+  letter-spacing: 15.6px;
+}
+@media screen and ((max-width: 576px) or (max-height: 576px)) {
+  .satellite__phobos::after {
+    opacity: 0;
+  }
+}
+.satellite__deimos {
+  width: 9.7244732577%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: min(5px, 1.8518518519dvh, 20px);
+  height: 9.7244732577%;
+  position: absolute;
+  left: 20.2593192869%;
+  bottom: -0.8103727715%;
+  animation: rotation 12s linear infinite reverse both;
+}
+.satellite__deimos::after {
+  content: "Деймос";
+  position: absolute;
+  top: 100%;
+  color: #FFDEB7;
+  font-size: calc(0.78rem + 6.6 * (100dvw - 280px) / (1920 - 280));
+  letter-spacing: 15.6px;
+}
+@media screen and ((max-width: 576px) or (max-height: 576px)) {
+  .satellite__deimos::after {
+    opacity: 0;
+  }
+}
+.satellite__background {
+  background-color: #FFB762;
 }

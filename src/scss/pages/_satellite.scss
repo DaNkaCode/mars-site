@@ -1,0 +1,61 @@
+.satellite {
+    @include section-position;
+    @extend %section-size;
+
+    $orbit-size: 617;
+
+    &__title {
+        @include adaptive-style($property: font-size, $pc-font-size: $section-title-font-size, $mobile-font-size: $section-title-font-size-mobile);
+
+        text-align: center;
+        color: $title-second-color;
+
+    }
+
+    &__orbit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        $width: $orbit-size / 1920 * 100dvw;
+        $height: $orbit-size / 1080 * 100dvh;
+        $aspect-ratio: 1;
+        
+        width: MIN($width, $height * $aspect-ratio);
+        height: MIN($height, $width / $aspect-ratio);
+        aspect-ratio: $aspect-ratio;
+
+        border: 2px solid $white;
+        border-radius: 50%;
+
+        position: sticky;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__mars {
+        width: 410 / 617 * 100%;
+    }
+
+    &__phobos, &__deimos {
+        position: absolute;
+    }
+
+    &__phobos {
+        @include satellite-settings($name: "Фобос", $satellite-height: 97, $satellite-width: 95, $orbit-height: $orbit-size, $left-position: -38, $bottom-position: 172);
+
+        
+
+        width: 95 / 617 * 100%;
+    }
+
+    &__deimos {
+        width: 60 / 617 * 100%;
+        @include satellite-settings($name: "Деймос", $satellite-height: 60, $satellite-width: 60, $orbit-height: $orbit-size, $left-position: 125, $bottom-position: -5);
+    }
+
+    &__background {
+        background-color: $yellow;
+    }
+}
