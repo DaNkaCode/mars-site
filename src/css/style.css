@@ -583,6 +583,7 @@ p, a, label, input, input::placeholder, button {
 
 .satellite {
   position: relative;
+  overflow: clip;
 }
 .satellite__content {
   position: relative;
@@ -592,6 +593,40 @@ p, a, label, input, input::placeholder, button {
   position: absolute;
   top: 0;
   left: 0;
+}
+@media screen and (max-height: 576px) {
+  .satellite .satellite__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    row-gap: 30px;
+  }
+  .satellite .satellite__title, .satellite .satellite__orbit {
+    top: auto;
+    left: auto;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .satellite .satellite__orbit {
+    position: relative;
+  }
+}
+@media screen and (orientation: portrait) {
+  .satellite .satellite__title {
+    padding-bottom: calc(min(57.1296296296dvh, 32.1354166667dvw) + 60px);
+    position: sticky;
+    top: 30px;
+  }
+  .satellite .satellite__orbit {
+    position: sticky;
+  }
 }
 .satellite__title {
   font-size: calc(0.9rem + 33 * (100dvw - 280px) / (1920 - 280));
@@ -611,13 +646,14 @@ p, a, label, input, input::placeholder, button {
   width: min(32.1354166667dvw, 57.1296296296dvh);
   height: min(57.1296296296dvh, 32.1354166667dvw);
   aspect-ratio: 1;
+  margin-bottom: 30px;
   border: 2px solid #FFFFFF;
   border-radius: 50%;
-  position: sticky;
+  position: absolute;
+  top: calc(50% - 16.0677083333dvw);
   left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .satellite__mars {
   width: 66.4505672609%;
