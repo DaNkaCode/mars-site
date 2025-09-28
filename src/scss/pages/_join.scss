@@ -1,0 +1,44 @@
+.join {
+    @include section-position;
+    @extend %section-size;
+
+    &__content>.container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__link {
+        @include adaptive-style(padding-block, $grid-gap * 1.25, $grid-gap * 0.66);
+        @include adaptive-style(padding-inline, $grid-gap * 1.5, $grid-gap);
+        
+        width: fit-content;
+        background-color: $blue;
+        text-align: center;
+    }
+
+    &__background {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        background-color: $background-darker;
+    }
+
+    &__rocket {
+        width: 130 / 1920 * 100dvw;
+
+        position: absolute;
+        right: 170px;
+        bottom: 415 / 1080 * 100dvh;
+
+        @media screen and (max-width: 430px) {
+            right: 140px;
+        }
+
+        @media screen and (min-aspect-ratio: 1920 / 1080) {
+            right: 15%;
+        }
+    }
+}
