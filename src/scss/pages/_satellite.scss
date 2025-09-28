@@ -14,7 +14,7 @@
 
     overflow: clip;
 
-    @media screen and (max-height: $breakpoint-sm) {
+    @media screen and ((max-height: $breakpoint-sm) or (min-aspect-ratio: 3 / 2)) {
         & &__content {
             display: flex;
             flex-direction: column;

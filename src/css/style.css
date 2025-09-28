@@ -594,7 +594,7 @@ p, a, label, input, input::placeholder, button {
   top: 0;
   left: 0;
 }
-@media screen and (max-height: 576px) {
+@media screen and ((max-height: 576px) or (min-aspect-ratio: 3/2)) {
   .satellite .satellite__content {
     display: -webkit-box;
     display: -ms-flexbox;
