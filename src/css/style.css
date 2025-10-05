@@ -438,7 +438,6 @@ p, a, label, input, input::placeholder, button {
   .about__content {
     max-width: none;
     left: auto;
-    border: 3px solid white;
   }
   .about__content > .container {
     display: -webkit-box;
