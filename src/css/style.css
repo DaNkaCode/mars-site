@@ -794,3 +794,24 @@ p, a, label, input, input::placeholder, button {
     right: 15%;
   }
 }
+
+.footer {
+  height: 33dvh;
+  background-color: #FFB762;
+}
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.footer__title {
+  font-size: calc(0.9rem + 33 * (100dvw - 280px) / (1920 - 280));
+  color: #000000;
+  letter-spacing: 52%;
+}

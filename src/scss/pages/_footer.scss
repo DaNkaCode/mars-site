@@ -1,0 +1,19 @@
+.footer {
+    height: 33dvh;
+
+    background-color: $yellow;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        @include adaptive-style(font-size, $section-title-font-size, $section-title-font-size-mobile);
+
+        color: $black;
+
+        letter-spacing: 52%;
+    }
+}
