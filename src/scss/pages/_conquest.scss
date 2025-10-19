@@ -66,10 +66,12 @@
         aspect-ratio: $aspect-ratio;
 
         bottom: calc((1dvh + 1dvw) * 2);
-        left: 40vw;
+        // left: 40vw;
+        // transform: rotateY(180deg);
 
         transform-origin: bottom center;
-        transform: rotateY(180deg);
+
+        animation: conquest-rover-moving 7s linear 0s infinite both;
     }
 
     &__alien-img {
@@ -80,8 +82,10 @@
         aspect-ratio: $aspect-ratio;
 
         bottom: calc((1dvh + 1dvw) * 2);
-        left: 10vw;
+        // left: 10vw;
         
         transform-origin: bottom;
+
+        animation: conquest-alien-moving 7s linear 0s infinite both;
     }
 }

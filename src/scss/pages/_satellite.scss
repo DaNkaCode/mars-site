@@ -70,11 +70,16 @@
         position: absolute;
         top: calc(50% - $orbit-template-width / 2);
         left: 50%;
-        transform: translateX(-50%);
-    }
+        // transform: translateX(-50%);
 
+        transform-origin: center;
+
+        animation: rotate 4s linear 0s infinite;
+    }
+    
     &__mars {
         width: 410 / 617 * 100%;
+        animation: rotate 2s linear 0s infinite reverse;
     }
 
     &__phobos,

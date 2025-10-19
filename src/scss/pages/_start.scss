@@ -47,5 +47,7 @@
         bottom: 75%;
 
         rotate: -40deg;
+
+        animation: start-rocket-flight 10s $bezier 1s both;
     }
 }

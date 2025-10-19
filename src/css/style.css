@@ -211,6 +211,253 @@ p, a, label, input, input::placeholder, button {
   line-height: calc(0.6rem + 27 * (100dvw - 280px) / (1920 - 280));
 }
 
+@-webkit-keyframes start-rocket-flight {
+  0% {
+    bottom: 0;
+    right: 110%;
+    rotate: 40deg;
+  }
+  40% {
+    bottom: 100%;
+    right: 90%;
+    rotate: 0deg;
+  }
+  100% {
+    right: 70%;
+    bottom: 75%;
+    rotate: -40deg;
+  }
+}
+
+@keyframes start-rocket-flight {
+  0% {
+    bottom: 0;
+    right: 110%;
+    rotate: 40deg;
+  }
+  40% {
+    bottom: 100%;
+    right: 90%;
+    rotate: 0deg;
+  }
+  100% {
+    right: 70%;
+    bottom: 75%;
+    rotate: -40deg;
+  }
+}
+@-webkit-keyframes about-alien-idle {
+  100% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+}
+@keyframes about-alien-idle {
+  100% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+}
+@-webkit-keyframes about-alien-eye {
+  0% {
+    -webkit-transform: translateX(-7px);
+            transform: translateX(-7px);
+  }
+  50% {
+    -webkit-transform: translate(-3px, 5px);
+            transform: translate(-3px, 5px);
+  }
+  75% {
+    -webkit-transform: translateX(7px);
+            transform: translateX(7px);
+  }
+  100% {
+    -webkit-transform: translateX(-7px);
+            transform: translateX(-7px);
+  }
+}
+@keyframes about-alien-eye {
+  0% {
+    -webkit-transform: translateX(-7px);
+            transform: translateX(-7px);
+  }
+  50% {
+    -webkit-transform: translate(-3px, 5px);
+            transform: translate(-3px, 5px);
+  }
+  75% {
+    -webkit-transform: translateX(7px);
+            transform: translateX(7px);
+  }
+  100% {
+    -webkit-transform: translateX(-7px);
+            transform: translateX(-7px);
+  }
+}
+@-webkit-keyframes join-rocket-flight {
+  0%, 5%, 95%, 100% {
+    bottom: 30px;
+  }
+  10% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  30% {
+    -webkit-transform: translateY(calc(100% + 30px)) rotate(0deg);
+            transform: translateY(calc(100% + 30px)) rotate(0deg);
+  }
+  35%, 40% {
+    -webkit-transform: translateY(calc(100% + 30px)) rotate(180deg);
+            transform: translateY(calc(100% + 30px)) rotate(180deg);
+  }
+  45%, 50% {
+    bottom: 100%;
+    -webkit-transform: translateY(calc(100% + 30px)) rotate(180deg);
+            transform: translateY(calc(100% + 30px)) rotate(180deg);
+  }
+  80% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  85%, 90% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes join-rocket-flight {
+  0%, 5%, 95%, 100% {
+    bottom: 30px;
+  }
+  10% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  30% {
+    -webkit-transform: translateY(calc(100% + 30px)) rotate(0deg);
+            transform: translateY(calc(100% + 30px)) rotate(0deg);
+  }
+  35%, 40% {
+    -webkit-transform: translateY(calc(100% + 30px)) rotate(180deg);
+            transform: translateY(calc(100% + 30px)) rotate(180deg);
+  }
+  45%, 50% {
+    bottom: 100%;
+    -webkit-transform: translateY(calc(100% + 30px)) rotate(180deg);
+            transform: translateY(calc(100% + 30px)) rotate(180deg);
+  }
+  80% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  85%, 90% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes rotate {
+  to {
+    rotate: 360deg;
+  }
+}
+@keyframes rotate {
+  to {
+    rotate: 360deg;
+  }
+}
+@-webkit-keyframes conquest-alien-moving {
+  0%, 40% {
+    left: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  52% {
+    left: 20dvw;
+    -webkit-transform: translateX(-17%);
+            transform: translateX(-17%);
+  }
+  70%, 100% {
+    left: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes conquest-alien-moving {
+  0%, 40% {
+    left: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  52% {
+    left: 20dvw;
+    -webkit-transform: translateX(-17%);
+            transform: translateX(-17%);
+  }
+  70%, 100% {
+    left: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@-webkit-keyframes conquest-rover-moving {
+  0% {
+    left: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  17% {
+    left: 60dvw;
+    -webkit-transform: translateX(-50%) rotateY(0deg);
+            transform: translateX(-50%) rotateY(0deg);
+  }
+  18% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  35%, 48% {
+    left: 40vw;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  49% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  60%, 100% {
+    left: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes conquest-rover-moving {
+  0% {
+    left: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  17% {
+    left: 60dvw;
+    -webkit-transform: translateX(-50%) rotateY(0deg);
+            transform: translateX(-50%) rotateY(0deg);
+  }
+  18% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  35%, 48% {
+    left: 40vw;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  49% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  60%, 100% {
+    left: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -388,6 +635,8 @@ p, a, label, input, input::placeholder, button {
   right: 70%;
   bottom: 75%;
   rotate: -40deg;
+  -webkit-animation: start-rocket-flight 10s cubic-bezier(0.18, 0.25, 0.18, 0.83) 1s both;
+          animation: start-rocket-flight 10s cubic-bezier(0.18, 0.25, 0.18, 0.83) 1s both;
 }
 
 .about {
@@ -423,6 +672,12 @@ p, a, label, input, input::placeholder, button {
   position: absolute;
   top: 31.5729047072%;
   left: 25.5417956656%;
+  -webkit-animation: about-alien-idle 3s cubic-bezier(0.18, 0.25, 0.18, 0.83) infinite alternate;
+          animation: about-alien-idle 3s cubic-bezier(0.18, 0.25, 0.18, 0.83) infinite alternate;
+}
+.about__picture > .alien > .alien__eye {
+  -webkit-animation: about-alien-eye 3s cubic-bezier(0.18, 0.25, 0.18, 0.83) infinite;
+          animation: about-alien-eye 3s cubic-bezier(0.18, 0.25, 0.18, 0.83) infinite;
 }
 .about__info {
   display: -webkit-box;
@@ -565,19 +820,19 @@ p, a, label, input, input::placeholder, button {
   width: 24.7395833333dvw;
   aspect-ratio: 1.1336515513;
   bottom: calc((1dvh + 1dvw) * 2);
-  left: 40vw;
   -webkit-transform-origin: bottom center;
           transform-origin: bottom center;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  -webkit-animation: conquest-rover-moving 7s linear 0s infinite both;
+          animation: conquest-rover-moving 7s linear 0s infinite both;
 }
 .conquest__alien-img {
   width: 20.6770833333dvw;
   aspect-ratio: 0.7892644135;
   bottom: calc((1dvh + 1dvw) * 2);
-  left: 10vw;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
+  -webkit-animation: conquest-alien-moving 7s linear 0s infinite both;
+          animation: conquest-alien-moving 7s linear 0s infinite both;
 }
 
 .satellite {
@@ -651,11 +906,14 @@ p, a, label, input, input::placeholder, button {
   position: absolute;
   top: calc(50% - 16.0677083333dvw);
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: rotate 4s linear 0s infinite;
+          animation: rotate 4s linear 0s infinite;
 }
 .satellite__mars {
   width: 66.4505672609%;
+  animation: rotate 2s linear 0s infinite reverse;
 }
 .satellite__phobos, .satellite__deimos {
   position: absolute;
@@ -676,7 +934,7 @@ p, a, label, input, input::placeholder, button {
   position: absolute;
   left: -6.1588330632%;
   bottom: 27.8768233387%;
-  animation: rotation 12s linear infinite reverse both;
+  animation: rotate 4s linear infinite reverse both;
   width: 15.397082658%;
 }
 .satellite__phobos::after {
@@ -709,7 +967,7 @@ p, a, label, input, input::placeholder, button {
   position: absolute;
   left: 20.2593192869%;
   bottom: -0.8103727715%;
-  animation: rotation 12s linear infinite reverse both;
+  animation: rotate 4s linear infinite reverse both;
 }
 .satellite__deimos::after {
   content: "Деймос";
@@ -782,6 +1040,8 @@ p, a, label, input, input::placeholder, button {
   position: absolute;
   right: 170px;
   bottom: 38.4259259259dvh;
+  -webkit-animation: join-rocket-flight 7s linear infinite alternate both;
+          animation: join-rocket-flight 7s linear infinite alternate both;
 }
 @media screen and (max-width: 430px) {
   .join__rocket {

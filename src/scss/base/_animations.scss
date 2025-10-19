@@ -1,0 +1,140 @@
+@keyframes start-rocket-flight {
+    0% {
+        bottom: 0;
+        right: 110%;
+
+        rotate: 40deg;
+    }
+
+    40% {
+        bottom: 100%;
+        right: 90%;
+
+        rotate: 0deg;
+    }
+
+    100% {
+        right: 70%;
+        bottom: 75%;
+
+        rotate: -40deg;
+    }
+}
+
+
+@keyframes about-alien-idle {
+    100% {
+        transform: translateY(50%);
+    }
+}
+
+
+@keyframes about-alien-eye {
+    0% {
+        transform: translateX(-7px);
+    }
+
+    50% {
+        transform: translate(-3px, 5px);
+    }
+
+    75% {
+        transform: translateX(7px);
+    }
+
+    100% {
+        transform: translateX(-7px);
+    }
+}
+
+
+@keyframes join-rocket-flight {
+
+    0%,
+    5%,
+    95%,
+    100% {
+        bottom: 30px;
+    }
+
+    10% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(calc(100% + 30px)) rotate(0deg);
+    }
+
+    35%,
+    40% {
+        transform: translateY(calc(100% + 30px)) rotate(180deg);
+    }
+
+    45%,
+    50% {
+        bottom: 100%;
+        transform: translateY(calc(100% + 30px)) rotate(180deg);
+    }
+
+    80% {
+        transform: rotate(180deg);
+    }
+
+    85%,
+    90% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotate {
+    to {
+        rotate: 360deg;
+    }
+}
+
+@keyframes conquest-alien-moving {
+    0%, 40% {
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    52% {
+        left: 20dvw;
+        transform: translateX(-17%);
+    }
+
+    70%, 100% {
+        left: 100%;
+        transform: translateX(0);
+    }
+}
+
+@keyframes conquest-rover-moving {
+    0% {
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    17% {
+        left: 60dvw;
+        transform: translateX(-50%) rotateY(0deg);
+    }
+
+    18% {
+        transform: rotateY(180deg);
+    }
+
+    35%, 48% {
+        left: 40vw;
+        transform: rotateY(180deg);
+    }
+
+    49% {
+        transform: rotateY(0deg);
+    }
+
+    60%, 100% {
+        left: 100%;
+        transform: translateX(0);
+    }
+}

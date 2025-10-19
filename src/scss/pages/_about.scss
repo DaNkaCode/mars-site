@@ -30,6 +30,12 @@
         position: absolute;
         top: 275 / 871 * 100%;
         left: 165 / 646 * 100%;
+
+        animation: about-alien-idle 3s $bezier infinite alternate;
+
+        &>.alien__eye {
+            animation: about-alien-eye 3s $bezier infinite;
+        }
     }
 
     &__info {

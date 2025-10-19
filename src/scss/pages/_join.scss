@@ -33,6 +33,8 @@
         right: 170px;
         bottom: 415 / 1080 * 100dvh;
 
+        animation: join-rocket-flight 7s linear infinite alternate both;
+
         @media screen and (max-width: 430px) {
             right: 140px;
         }
