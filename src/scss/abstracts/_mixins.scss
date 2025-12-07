@@ -19,7 +19,7 @@
 // их в px, если необходимо, и применяет стили с использованием calc для вычисления
 // адаптивного размера в зависимости от ширины экрана.
 // ====================================================
-@mixin adaptive-style($property, $pc-font-size, $mobile-font-size) {
+@mixin adaptive-style($property, $pc-font-size, $mobile-font-size, $start-size: $viewport-max, $final-size: $viewport-min) {
     // Вычисление разницы между размерами шрифта на больших и мобильных экранах
     $add-size: $pc-font-size - $mobile-font-size;
     
@@ -33,7 +33,7 @@
     }
 
     // Применение стилей с использованием calc для вычисления адаптивного размера шрифта
-    #{$property}: calc(#{$mobile-font-size} + #{strip-unit($add-size)} * ((100dvw - #{$viewport-min + px}) / (#{$viewport-max} - #{$viewport-min})));
+    #{$property}: calc(#{$mobile-font-size} + #{strip-unit($add-size)} * ((100dvw - #{$final-size + px}) / (#{$start-size} - #{$final-size})));
 }
 
 

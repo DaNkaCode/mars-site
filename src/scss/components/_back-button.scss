@@ -1,0 +1,20 @@
+.back-button {
+    @include adaptive-style(font-size, $section-small-font-size, $section-small-font-size-mobile);
+
+    background-color: $button-color;
+
+    border: none;
+
+    padding-block: 1em;
+    padding-inline: 3em;
+
+    transition: background-color 0.2s ease-in-out;
+
+    position: fixed;
+    top: $grid-gap;
+    left: 0;
+
+    &:hover {
+        background-color: $dark-blue;
+    }
+}
