@@ -1,0 +1,78 @@
+.quotes {
+    @include section-position;
+
+    background-color: $background-darker;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: $grid-gap * 3;
+
+        padding-bottom: 226 / 1080 * 100dvh;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(20px, 50 / 1080 * 100dvh, 50px);
+
+        a,
+        p {
+            text-align: center;
+        }
+
+        a {
+            display: block;
+            position: relative;
+            width: fit-content;
+
+            &::after {
+                position: absolute;
+                top: 100%;
+                left: 0;
+
+                transform: translateY($grid-gap);
+
+                filter: opacity(0.4);
+
+                
+
+                content: attr(data-shadow);
+            }
+        }
+    }
+
+    &__block {
+        display: block;
+
+        margin-top: $grid-gap * 4;
+        padding: 60 / 720 * 100%;
+
+        background-color: $blue;
+        
+        &>* {
+            display: flex;
+            flex-direction: column;
+            row-gap: $grid-gap;
+        }
+        
+        &>*:not(:last-of-type) {
+            margin-bottom: 12%;
+        }
+
+        &>*:nth-of-type(2n)>q {
+            color: $milk;
+        }
+
+    }
+
+    &__author {
+        color: $accent-color;
+        text-align: right;
+    }
+
+    &__background {
+        background: url("../img/quotes_bg.svg") bottom / contain no-repeat;
+    }
+}

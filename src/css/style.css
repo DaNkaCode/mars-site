@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("../font/Gputeks/stylesheet.css");
-.join__content, .join__background, .satellite__deimos-img, .satellite__phobos-img, .satellite__content, .satellite__background, .conquest__content, .conquest__background, .about__content, .about__background, .start__planet, .start__content, .start__background, .alien__body, .container {
+.quotes__content, .quotes__background, .join__content, .join__background, .satellite__deimos-img, .satellite__phobos-img, .satellite__content, .satellite__background, .conquest__content, .conquest__background, .about__content, .about__background, .start__planet, .start__content, .start__background, .alien__body, .container {
   width: 100%;
   height: 100%;
 }
@@ -206,7 +206,7 @@ input::-ms-input-placeholder {
   line-height: calc(0.5rem + 30 * (100dvw - 280px) / (1920 - 280));
 }
 
-p, a, label, input, input::placeholder, button, summary {
+p, a, label, input, input::placeholder, button, summary, q {
   font-size: calc(0.5rem + 15 * (100dvw - 280px) / (1920 - 280));
   line-height: calc(0.5rem + 30 * (100dvw - 280px) / (1920 - 280));
 }
@@ -1268,4 +1268,92 @@ p, a, label, input, input::placeholder, button, summary {
   .proffessions__card details p {
     font-size: calc(0.5rem + 15 * (100dvw - 992px) / (1920 - 992));
   }
+}
+
+.quotes {
+  position: relative;
+  background-color: #222735;
+}
+.quotes__content {
+  position: relative;
+  z-index: 2;
+}
+.quotes__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.quotes .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 90px;
+  padding-bottom: 20.9259259259dvh;
+}
+.quotes__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: clamp(20px, 4.6296296296dvh, 50px);
+}
+.quotes__title a,
+.quotes__title p {
+  text-align: center;
+}
+.quotes__title a {
+  display: block;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.quotes__title a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-filter: opacity(0.4);
+          filter: opacity(0.4);
+  content: attr(data-shadow);
+}
+.quotes__block {
+  display: block;
+  margin-top: 120px;
+  padding: 8.3333333333%;
+  background-color: #3E4761;
+}
+.quotes__block > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 30px;
+}
+.quotes__block > *:not(:last-of-type) {
+  margin-bottom: 12%;
+}
+.quotes__block > *:nth-of-type(2n) > q {
+  color: #FFDEB7;
+}
+.quotes__author {
+  color: #FD9B40;
+  text-align: right;
+}
+.quotes__background {
+  background: url("../img/quotes_bg.svg") bottom/contain no-repeat;
 }

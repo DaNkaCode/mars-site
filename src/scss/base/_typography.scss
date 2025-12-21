@@ -16,7 +16,7 @@ h2 {
     @include adaptive-style(line-height, $pc-font-size, $mobile-font-size);
 }
 
-p, a, label, input, input::placeholder, button, summary {
+p, a, label, input, input::placeholder, button, summary, q {
     $pc-font-size: $section-text-font-size;
     $mobile-font-size: $section-text-font-size-mobile;
 
