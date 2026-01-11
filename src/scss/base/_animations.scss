@@ -142,15 +142,15 @@
 
 @keyframes move-up {
     28%, 33% {
-        transform: translateY(-100%);
+        transform: translateY(calc(-100% - $grid-gap));
     }
 
     62%, 67% {
-        transform: translateY(-200%);
+        transform: translateY(calc(-200% - $grid-gap));
     }
 
     95%, 100% {
-        transform: translateY(-300%);
+        transform: translateY(calc(-300% - $grid-gap));
     }
 }
 

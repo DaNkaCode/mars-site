@@ -111,7 +111,8 @@
 
                 <div class="quotes__block">
                     <div class="quotes__gagarin">
-                        <q>Жизнь показывает, что и космос будут осваивать не какие-нибудь супермены, а самые простые люди.</q>
+                        <q>Жизнь показывает, что и космос будут осваивать не какие-нибудь супермены, а самые простые
+                            люди.</q>
 
                         <p class="quotes__author">Юрий Гагарин</p>
                     </div>
@@ -125,6 +126,37 @@
             </div>
 
             <div class="quotes__background"></div>
+        </div>
+    </section>
+
+    <section class="request">
+        <div class="container container--second">
+            <div class="request__content">
+                <form class="form request__form" action="#!">
+                    <h2 class="form__title">Записывайся сейчас</h2>
+
+                    <div class="form__body">
+                        <div class="form__wrapper">
+                            <input id="name" class="form__input" type="text" placeholder="Имя" required>
+                        </div>
+
+                        <div class="form__wrapper">
+                            <input id="age" class="form__input" type="number" min="18" max="120" step="1" placeholder="Возраст" required>
+                        </div>
+                        
+                        <div class="form__wrapper">
+                            <input id="job" class="form__input" type="text" placeholder="Образование и специальность" required>
+                        </div>
+                        
+                        <div class="form__wrapper">
+                            <input class="form__checkbox" id="agree" type="checkbox" required>
+                            <label for="agree">согласен на обработку персональных данных</label>
+                        </div>
+
+                        <button class="form__button">Записаться</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 </body>

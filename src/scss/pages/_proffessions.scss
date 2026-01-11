@@ -37,6 +37,10 @@
         @include adaptive-style(font-size, $section-title-font-size, $section-title-font-size-mobile);
         @include adaptive-style(line-height, $section-title-font-size, $section-title-font-size-mobile);
 
+        padding-block: $grid-gap;
+        transform: translateY(-1 * $grid-gap);
+        
+
         text-align: right;
 
         color: $accent-color;

@@ -1,0 +1,75 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    row-gap: $grid-gap / 2;
+
+    background-color: $blue;
+
+    &__title {
+        @include adaptive-style(font-size, $section-title-font-size, $section-title-font-size-mobile);
+
+        background-color: $dark-blue;
+        text-align: center;
+        padding: $grid-gap * 2 90 / 1315 * 100%;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: $grid-gap;
+
+        padding: $grid-gap * 2 90 / 1315 * 100%;
+    }
+
+    &__wrapper {
+        @extend %full-size;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: $grid-gap / 2;
+
+        &>input[type="text"],
+        &>input[type="number"] {
+            width: 100%;
+        }
+
+        // Убираем стрелки
+        &>input[type="number"]::-webkit-inner-spin-button,
+        &>input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        &>input[type="number"] {
+            -moz-appearance: textfield;
+            /* Firefox */
+        }
+    }
+
+    &__input {
+        border: none;
+        background-color: $medium-blue;
+        padding: 0px 10px 10px;
+
+        &::placeholder {
+            @include adaptive-style(font-size, $section-text-font-size, $section-text-font-size-mobile);
+        }
+    }
+
+    &__checkbox {
+        width: max(60 / 1315 * 100%, 30px);
+        aspect-ratio: 1;
+
+        &+label {
+            text-align: center;
+        }
+    }
+
+    &__button {
+        border: none;
+        background-color: $light-blue;
+        padding: $grid-gap / 1.5 90 / 1315 * 100%;
+    }
+}

@@ -14,6 +14,8 @@
     top: $grid-gap;
     left: 0;
 
+    z-index: $z-index-header;
+
     &:hover {
         background-color: $dark-blue;
     }
